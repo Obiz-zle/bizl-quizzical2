@@ -14,7 +14,7 @@ function App() {
   const [quizNotStarted, setQuizNotStarted] = useState(true);
 
 
-  useEffect(()=>{//could've also used Session Tokens to avoid question repetions, but fuck that ... maybe next time. Session Tokens are explain on the OpenTriviaDB API documentation
+  useEffect(()=>{
    const OpentdbAPI = "https://opentdb.com/api.php?amount=5&difficulty=easy";
    fetch(OpentdbAPI)
    .then(res => res.json())

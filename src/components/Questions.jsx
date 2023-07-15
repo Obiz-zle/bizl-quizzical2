@@ -106,32 +106,8 @@ function Questions(props) {
         
 
         setAllQuestionsDetails(tempQuest);
-        setTotalCorrectAnswers(0);// to reset the count when changes to answer choice are made after required number of questions answered is reach. Without this ,the total correct answers in the end was messed up
+        setTotalCorrectAnswers(0);
 
-        /*
-        setAllQuestionsDetails(prevDetails => {
-
-            for(let i = 0; i < prevDetails.length; i++){
-                if(prevDetails[i].id == selectedOptionId){
-                    prevDetails[i] = {...prevDetails[i], selectedIndex:selectedOptionIndex}
-                }
-                else{
-                    prevDetails[i] = {...prevDetails[i]}
-                }
-            }
-            return prevDetails;//investigate this return. Before trying to setup a new separate state to track selected answers
-            // I guess because this set function isn't rerendering the component after changing state because of how it's structured
-            // So this is probably a way to set state without causing a whole rerender
-        })
-
-        */
-
-        //setRender(prevRender => !prevRender);// normal set state function...So i'll trigger this to rerender the component
-        // I created a new state and was trying to use this to cause a rerender of the questions component after the click
-        
-        //console.log(allQuestionsDetails);
-
-      
      
     }
 
